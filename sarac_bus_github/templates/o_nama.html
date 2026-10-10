@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O nama | Sarač Bus</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a href="/" class="logo">
+
+            <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="Sarač Bus"
+            >
+
+        </a>
+
+
+        <nav>
+
+            <a href="/">
+                Početna
+            </a>
+
+            <a href="/vozni-park">
+                Vozni park
+            </a>
+
+            <a href="/usluge">
+                Usluge
+            </a>
+
+            <a href="/o-nama" class="active">
+                O nama
+            </a>
+
+            <a href="/kontakt">
+                Kontakt
+            </a>
+
+        </nav>
+
+
+        <a href="/kontakt" class="contact-button">
+            KONTAKT
+        </a>
+
+    </header>
+
+
+
+    <!-- O NAMA -->
+
+    <main class="about-page">
+
+
+        <!-- UVOD -->
+
+        <section class="about-intro">
+
+            <img
+                src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                alt="Sarač Bus"
+                class="about-logo"
+            >
+
+            <h1>
+                O <span>nama</span>
+            </h1>
+
+            <p>
+                Pouzdan partner za siguran i udoban prevoz
+                putnika.
+            </p>
+
+        </section>
+
+
+
+        <!-- NAŠA PRIČA -->
+
+        <section class="about-story">
+
+            <div class="about-story-text">
+
+                <p class="small-title">
+                    NAŠA PRIČA
+                </p>
+
+                <h2>
+                    Posvećeni sigurnom i pouzdanom putovanju
+                </h2>
+
+                <p>
+                    Sarač Bus je prevozničko društvo sa sjedištem
+                    u Tešnju, usmjereno na siguran, pouzdan i
+                    kvalitetan prevoz putnika.
+                </p>
+
+                <p>
+                    Kroz svakodnevni rad nastojimo pružiti
+                    profesionalnu uslugu, udobna putovanja i
+                    korektan odnos prema svakom putniku i
+                    poslovnom partneru.
+                </p>
+
+                <p>
+                    Naš vozni park obuhvata autobuse i minibuse
+                    različitih kapaciteta, što nam omogućava da
+                    odgovorimo na potrebe različitih grupa,
+                    organizacija i klijenata.
+                </p>
+
+            </div>
+
+
+            <div class="about-story-box">
+
+                <div class="about-highlight">
+
+                    <strong>
+                        SIGURNOST
+                    </strong>
+
+                    <span>
+                        Na prvom mjestu
+                    </span>
+
+                </div>
+
+
+                <div class="about-highlight">
+
+                    <strong>
+                        POUZDANOST
+                    </strong>
+
+                    <span>
+                        Partner na kojeg možete računati
+                    </span>
+
+                </div>
+
+
+                <div class="about-highlight">
+
+                    <strong>
+                        UDOBNOST
+                    </strong>
+
+                    <span>
+                        Ugodno putovanje za svakog putnika
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NAŠ PRISTUP -->
+
+        <section class="about-values">
+
+            <div class="about-values-heading">
+
+                <p class="small-title">
+                    NAŠ PRISTUP
+                </p>
+
+                <h2>
+                    Više od samog prevoza
+                </h2>
+
+                <p>
+                    Svako putovanje zahtijeva dobru organizaciju,
+                    odgovornost i pažnju prema putnicima.
+                </p>
+
+            </div>
+
+
+            <div class="about-values-grid">
+
+
+                <div class="about-value-card">
+
+                    <div class="about-value-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Sigurnost
+                    </h3>
+
+                    <p>
+                        Sigurnost putnika i tehnička ispravnost
+                        vozila predstavljaju osnovu našeg rada.
+                    </p>
+
+                </div>
+
+
+
+                <div class="about-value-card">
+
+                    <div class="about-value-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Profesionalnost
+                    </h3>
+
+                    <p>
+                        Trudimo se da svaki dogovor, putovanje
+                        i saradnja budu realizovani odgovorno
+                        i profesionalno.
+                    </p>
+
+                </div>
+
+
+
+                <div class="about-value-card">
+
+                    <div class="about-value-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Fleksibilnost
+                    </h3>
+
+                    <p>
+                        Različiti kapaciteti vozila omogućavaju
+                        prilagođavanje potrebama naših klijenata.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- POZIV -->
+
+        <section class="about-cta">
+
+            <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="Sarač Bus"
+                class="about-cta-logo"
+            >
+
+            <h2>
+                Planirate putovanje?
+            </h2>
+
+            <p>
+                Obratite nam se i zajedno pronađimo najbolje
+                rješenje za vaš prevoz.
+            </p>
+
+            <a href="/kontakt" class="contact-button">
+                KONTAKTIRAJTE NAS →
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+</body>
+
+</html>

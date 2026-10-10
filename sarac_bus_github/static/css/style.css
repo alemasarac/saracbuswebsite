@@ -1,0 +1,1539 @@
+/* ================================
+   OSNOVNE POSTAVKE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #071a33;
+}
+
+
+/* ================================
+   HEADER / NAVIGACIJA
+================================ */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 95px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    z-index: 10;
+
+    background: rgba(7, 26, 51, 0.82);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 155px;
+    height: auto;
+    display: block;
+}
+
+
+/* NAVIGACIJA */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+nav a {
+    position: relative;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #f2c230;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f2c230;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+
+/* KONTAKT DUGME */
+
+.contact-button {
+    display: inline-block;
+
+    padding: 12px 23px;
+
+    background: #f2c230;
+
+    color: #071a33;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-radius: 4px;
+
+    transition: 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   HERO / NASLOVNA FOTOGRAFIJA
+================================ */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 130px 8% 100px;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(4, 18, 37, 0.94) 0%,
+            rgba(4, 18, 37, 0.76) 35%,
+            rgba(4, 18, 37, 0.30) 70%,
+            rgba(4, 18, 37, 0.10) 100%
+        ),
+        url("../images/bus.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+/* HERO SADRŽAJ */
+
+.hero-content {
+    position: relative;
+
+    max-width: 680px;
+
+    color: #ffffff;
+
+    z-index: 2;
+}
+
+
+/* MALI NASLOV */
+
+.small-title {
+    color: #f2c230;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+/* GLAVNI NASLOV */
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.03;
+
+    font-weight: 700;
+
+    margin-bottom: 28px;
+
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #f2c230;
+}
+
+
+/* OPIS */
+
+.hero-text {
+    max-width: 570px;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 38px;
+}
+
+
+/* ================================
+   DUGMAD
+================================ */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px 25px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    border-radius: 4px;
+
+    transition: 0.3s ease;
+}
+
+
+/* GLAVNO DUGME */
+
+.button.primary {
+    background: #f2c230;
+
+    color: #071a33;
+}
+
+.button.primary:hover {
+    background: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* SEKUNDARNO DUGME */
+
+.button.secondary {
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    color: #ffffff;
+}
+
+.button.secondary:hover {
+    background: #ffffff;
+
+    color: #071a33;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================================
+   DONJA TRAKA
+================================ */
+
+.features {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    min-height: 125px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    background: rgba(4, 18, 37, 0.92);
+
+    backdrop-filter: blur(8px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    z-index: 5;
+}
+
+.feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 25px 30px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: white;
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(242, 194, 48, 0.15);
+
+    color: #f2c230;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.feature h3 {
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+.feature p {
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* ================================
+   MOBILNI PRIKAZ
+================================ */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 18px;
+    }
+
+    .contact-button {
+        display: none;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature:nth-child(2) {
+        border-right: none;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        height: 75px;
+
+        padding: 0 5%;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 100vh;
+
+        padding: 120px 7% 230px;
+
+        background-position: 62% center;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+
+        position: absolute;
+
+        bottom: 0;
+    }
+
+    .feature {
+        padding: 13px 20px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .feature:nth-child(3),
+    .feature:nth-child(4) {
+        display: none;
+    }
+}
+/* ==========================================
+   VOZNI PARK
+========================================== */
+
+.fleet-page {
+    background: #f5f7fa;
+    min-height: 100vh;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+
+/* UVOD */
+
+.fleet-intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 30px 70px;
+}
+/* LOGO IZNAD NASLOVA */
+
+.fleet-logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+
+/* LOGO NA KARTICAMA */
+
+.vehicle-logo {
+    width: 90px;
+    height: auto;
+    display: block;
+    margin: 0 auto 18px;
+}
+
+.fleet-intro h1 {
+    color: #071a33;
+    font-size: 58px;
+    margin-bottom: 20px;
+}
+
+.fleet-intro h1 span {
+    color: #f2c230;
+}
+
+.fleet-intro > p:last-child {
+    color: #667085;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* SEKCIJA */
+
+.fleet-section {
+    max-width: 1250px;
+    margin: 0 auto 80px;
+    padding: 0 30px;
+}
+
+.fleet-section h2 {
+    color: #071a33;
+    font-size: 32px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 5px solid #f2c230;
+}
+
+
+/* MREŽA VOZILA */
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+
+/* KARTICA */
+
+.vehicle-card {
+ background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(7, 26, 51, 0.08);
+    transition: 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 40px rgba(7, 26, 51, 0.15);
+}
+
+
+/* SLIKA */
+
+.vehicle-image {
+    height: 220px;
+
+    background: #dce2e9;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #7a8491;
+
+    font-size: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8edf2,
+            #cbd3dc
+        );
+}
+
+
+/* PODACI */
+
+.vehicle-info {
+    padding: 25px;
+}
+
+.vehicle-type {
+    color: #d6a900;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.vehicle-info h3 {
+    color: #071a33;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+.vehicle-info > p:not(.vehicle-type) {
+    color: #667085;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+/* DETALJI */
+
+.vehicle-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #e5e7eb;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #344054;
+
+    font-size: 13px;
+}
+
+
+/* DUGME */
+
+.vehicle-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #071a33;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
+}
+
+.vehicle-button:hover {
+    color: #d6a900;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .fleet-page {
+        padding-top: 110px;
+    }
+
+    .fleet-intro h1 {
+        font-size: 42px;
+    }
+
+    .fleet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fleet-section {
+        padding: 0 20px;
+    }
+
+}
+.vehicle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* =========================================
+   KONTAKT STRANICA
+   ========================================= */
+
+.contact-page {
+    padding: 100px 7% 80px;
+    background: #f7f9fc;
+    min-height: calc(100vh - 100px);
+}
+
+
+/* UVOD */
+
+.contact-intro {
+    max-width: 850px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.contact-intro .small-title {
+    color: #d8a928;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.contact-intro h1 {
+    font-size: 48px;
+    color: #071a33;
+    margin-bottom: 20px;
+}
+
+.contact-intro h1 span {
+    color: #d8a928;
+}
+
+.contact-intro > p:last-child {
+    color: #667085;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* GLAVNI KONTAKT SADRŽAJ */
+
+.contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+/* KONTAKT INFORMACIJE */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item {
+    background: #ffffff;
+    padding: 28px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(7, 26, 51, 0.08);
+    border-left: 4px solid #d8a928;
+}
+
+.contact-item h3 {
+    margin: 0 0 8px;
+    color: #071a33;
+    font-size: 19px;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* KONTAKT FORMA */
+
+.contact-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(7, 26, 51, 0.08);
+}
+
+.contact-form h2 {
+    margin: 0 0 30px;
+    color: #071a33;
+    font-size: 30px;
+}
+
+
+/* POLJA */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #071a33;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d9dee7;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #071a33;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #d8a928;
+    box-shadow: 0 0 0 3px rgba(216, 169, 40, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+
+/* DUGME */
+
+.contact-form .vehicle-button {
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px 20px;
+}
+
+
+/* MOBILNI PRIKAZ */
+
+@media (max-width: 900px) {
+
+    .contact-page {
+        padding: 70px 5% 60px;
+    }
+
+    .contact-intro h1 {
+        font-size: 38px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-page {
+        padding: 50px 5% 50px;
+    }
+
+    .contact-intro {
+        margin-bottom: 45px;
+    }
+
+    .contact-intro h1 {
+        font-size: 32px;
+    }
+
+    .contact-intro > p:last-child {
+        font-size: 16px;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 25px;
+    }
+
+    .contact-item {
+        padding: 22px;
+    }
+
+}
+/* =========================================
+   O NAMA STRANICA
+   ========================================= */
+
+.about-page {
+    padding: 100px 7% 80px;
+    background: #f7f9fc;
+    min-height: calc(100vh - 100px);
+}
+
+
+/* UVOD */
+
+.about-intro {
+    max-width: 850px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.about-intro .small-title {
+    color: #d8a928;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-intro h1 {
+    font-size: 48px;
+    color: #071a33;
+    margin-bottom: 20px;
+}
+
+.about-intro h1 span {
+    color: #d8a928;
+}
+
+.about-intro > p:last-child {
+    color: #667085;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* NAŠA PRIČA */
+
+.about-story {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-story-text .small-title,
+.about-values-heading .small-title,
+.about-cta .small-title {
+    color: #d8a928;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-story-text h2 {
+    color: #071a33;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 0 0 25px;
+}
+
+.about-story-text p {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+/* HIGHLIGHTS */
+
+.about-story-box {
+    background: #071a33;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(7, 26, 51, 0.15);
+}
+
+.about-highlight {
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.about-highlight:last-child {
+    border-bottom: none;
+}
+
+.about-highlight strong {
+    display: block;
+    color: #d8a928;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.about-highlight span {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* NAŠ PRISTUP */
+
+.about-values {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+}
+
+.about-values-heading {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.about-values-heading h2 {
+    color: #071a33;
+    font-size: 36px;
+    margin: 0 0 15px;
+}
+
+.about-values-heading > p:last-child {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* KARTICE */
+
+.about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-value-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(7, 26, 51, 0.08);
+    transition: 0.3s ease;
+}
+
+.about-value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(7, 26, 51, 0.12);
+}
+
+.about-value-number {
+    color: #d8a928;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.about-value-card h3 {
+    color: #071a33;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.about-value-card p {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* CTA */
+
+.about-cta {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px;
+    background: #071a33;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.about-cta h2 {
+    color: #ffffff;
+    font-size: 38px;
+    margin: 0 0 15px;
+}
+
+.about-cta > p:not(.small-title) {
+    color: #c7d0dc;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.about-cta .contact-button {
+    display: inline-block;
+}
+
+
+/* MOBILNI PRIKAZ */
+
+@media (max-width: 900px) {
+
+    .about-page {
+        padding: 70px 5% 60px;
+    }
+
+    .about-intro h1 {
+        font-size: 38px;
+    }
+
+    .about-story {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-values-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-page {
+        padding: 50px 5% 50px;
+    }
+
+    .about-intro {
+        margin-bottom: 55px;
+    }
+
+    .about-intro h1 {
+        font-size: 32px;
+    }
+
+    .about-intro > p:last-child {
+        font-size: 16px;
+    }
+
+    .about-story-text h2 {
+        font-size: 29px;
+    }
+
+    .about-values-heading h2 {
+        font-size: 29px;
+    }
+
+    .about-story-box {
+        padding: 25px;
+    }
+
+    .about-value-card {
+        padding: 28px;
+    }
+
+    .about-cta {
+        padding: 40px 25px;
+    }
+
+    .about-cta h2 {
+        font-size: 30px;
+    }
+
+}
+/* =========================================
+   USLUGE STRANICA
+   ========================================= */
+
+.services-page {
+    padding: 80px 7%;
+    background: #f7f8fa;
+}
+
+.services-intro {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.services-intro h1 {
+    font-size: 42px;
+    color: #071a33;
+    margin-bottom: 18px;
+}
+
+.services-intro p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #667085;
+}
+
+.services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(7, 26, 51, 0.08);
+    border-top: 3px solid #d8a928;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(7, 26, 51, 0.12);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    color: #071a33;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #667085;
+    margin-bottom: 22px;
+}
+
+.service-link {
+    color: #071a33;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.service-link:hover {
+    color: #d8a928;
+}
+
+.services-cta {
+    max-width: 900px;
+    margin: 70px auto 0;
+    padding: 45px;
+    background: #071a33;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.services-cta h2 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.services-cta p {
+    color: #dfe5ec;
+    margin-bottom: 25px;
+}
+
+.services-cta .vehicle-button {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-page {
+        padding: 60px 5%;
+    }
+
+    .services-intro h1 {
+        font-size: 34px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-cta {
+        padding: 35px 25px;
+    }
+
+    .services-cta h2 {
+        font-size: 25px;
+    }
+}
+/* =========================================
+   LOGOTIPI - USLUGE
+   ========================================= */
+
+.services-logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+.service-logo {
+    width: 90px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.services-cta-logo {
+    width: 130px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+/* =========================================
+   LOGOTIPI - O NAMA
+   ========================================= */
+
+.about-logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+.about-cta-logo {
+    width: 130px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+/* =========================================
+   LOGO - KONTAKT
+   ========================================= */
+
+.contact-logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+}
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    background: #071a33;
+    color: #ffffff;
+    margin-top: 0;
+    border-top: 3px solid #d8a928;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 30px 50px;
+
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1.2fr;
+    gap: 80px;
+}
+
+
+/* BRAND */
+
+.footer-brand {
+    max-width: 360px;
+}
+
+.footer-logo {
+    width: 155px;
+    height: auto;
+    display: block;
+    margin-bottom: 22px;
+}
+
+.footer-brand p {
+    color: #aeb9c8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* NASLOVI */
+
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 3px 0 22px;
+}
+
+
+/* LINKOVI */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column a {
+    width: fit-content;
+    color: #aeb9c8;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 13px;
+    transition: 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #d8a928;
+    transform: translateX(3px);
+}
+
+
+/* KONTAKT */
+
+.footer-contact-item {
+    margin-bottom: 14px;
+}
+
+.footer-contact-label {
+    display: block;
+    color: #718096;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.footer-contact-item a {
+    margin: 0;
+    color: #d7dee8;
+}
+
+
+/* DONJI DIO */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #718096;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* MOBILNI */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding: 45px 25px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-logo {
+        width: 140px;
+    }
+
+    .footer-bottom {
+        padding: 18px 25px;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+/* =========================================
+   IKONE - PREDNOSTI
+   ========================================= */
+
+.feature-icon {
+    color: #f2c230;
+}
+
+.feature-icon svg {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+}

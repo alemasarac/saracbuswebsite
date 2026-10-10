@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kontakt | Sarač Bus</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a href="/" class="logo">
+
+            <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="Sarač Bus"
+            >
+
+        </a>
+
+
+        <nav>
+
+            <a href="/">
+                Početna
+            </a>
+
+            <a href="/vozni-park">
+                Vozni park
+            </a>
+
+            <a href="/usluge">
+                Usluge
+            </a>
+
+            <a href="/o-nama">
+                O nama
+            </a>
+
+            <a href="/kontakt" class="active">
+                Kontakt
+            </a>
+
+        </nav>
+
+
+        <a href="/kontakt" class="contact-button">
+            KONTAKT
+        </a>
+
+    </header>
+
+
+
+    <!-- KONTAKT -->
+
+    <main class="contact-page">
+
+
+        <!-- UVOD -->
+<section class="contact-intro">
+
+    <img
+        src="{{ url_for('static', filename='images/logo-dark.png') }}"
+        alt="Sarač Bus"
+        class="contact-logo"
+    >
+
+    <h1>
+        Kontaktirajte <span>nas</span>
+    </h1>
+                   <p>
+                Za informacije, rezervacije i upite
+                slobodno nam se obratite.
+            </p>
+
+        </section>
+
+
+
+        <!-- KONTAKT SADRŽAJ -->
+
+        <section class="contact-section">
+
+
+            <!-- INFORMACIJE -->
+
+            <div class="contact-info">
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Telefon / fax
+                    </h3>
+
+                    <p>
+    <a href="tel:+38732668590">
+        032 668 590
+    </a>
+                    </p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <h3>
+                        Kontakt telefon
+                    </h3>
+
+                    <p>
+                       <a href="tel:+38761477586">
+                         061 477 586
+                       </a>
+                    </p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <h3>
+                        WhatsApp / Viber
+                    </h3>
+
+                    <p>
+             <a href="https://wa.me/387603560875" target="_blank">
+                060 356 08 75
+             </a>                    
+                   </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        E-mail
+                    </h3>
+
+                    <p>
+                       <a href="mailto:saracbus.info@gmail.com">
+        saracbus.info@gmail.com
+    </a>
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Adresa
+                    </h3>
+
+                    <p>
+                        Lončari 32., Tešanj, Bosna i Hercegovina
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Radno vrijeme
+                    </h3>
+
+                    <p>
+                        Pon – Pet: 08:00 – 16:00
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FORMA -->
+
+            <div class="contact-form">
+
+                <h2>
+                    Pošaljite upit
+                </h2>
+
+
+                <form>
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Ime i prezime
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Vaše ime i prezime"
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Vaša e-mail adresa"
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Telefon
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Vaš broj telefona"
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Poruka
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Unesite vašu poruku..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="vehicle-button"
+                    >
+                        POŠALJITE UPIT →
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+</body>
+
+</html>

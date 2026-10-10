@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vozni park | Sarač Bus</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            <a href="/">
+                <img
+                    src="{{ url_for('static', filename='images/logo.png') }}"
+                    alt="Sarač Bus"
+                >
+            </a>
+        </div>
+
+
+        <nav>
+
+            <a href="/">
+                Početna
+            </a>
+
+            <a href="/vozni-park" class="active">
+                Vozni park
+            </a>
+
+            <a href="/usluge">
+                Usluge
+            </a>
+
+            <a href="/o-nama">
+                O nama
+            </a>
+
+            <a href="/kontakt">
+                Kontakt
+            </a>
+
+        </nav>
+
+
+        <a href="/kontakt" class="contact-button">
+            KONTAKT
+        </a>
+
+    </header>
+
+
+
+    <!-- SADRŽAJ -->
+
+    <main class="fleet-page">
+
+
+        <!-- UVOD -->
+
+        <section class="fleet-intro">
+
+            <img
+                src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                alt="Sarač Bus"
+                class="fleet-logo"
+            >
+
+            <h1>
+                Naš <span>vozni park</span>
+            </h1>
+
+            <p>
+                Pouzdana, udobna i sigurna vozila
+                za različite vrste putovanja.
+            </p>
+
+        </section>
+
+
+
+        <!-- AUTOBUSI -->
+
+        <section class="fleet-section">
+
+            <h2>Autobusi</h2>
+
+            <div class="fleet-grid">
+
+
+                <!-- NEOPLAN -->
+
+                <div class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/neoplan.jpg') }}"
+                            alt="Neoplan Cityliner"
+                        >
+
+                    </div>
+
+
+                    <div class="vehicle-info">
+
+                        <img
+                            src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                            alt="Sarač Bus"
+                            class="vehicle-logo"
+                        >
+
+                        <p class="vehicle-type">
+                            AUTOBUS
+                        </p>
+
+                        <h3>
+                            Neoplan Cityliner
+                        </h3>
+
+                        <p>
+                            Turistički autobus
+                        </p>
+
+
+                        <div class="vehicle-details">
+
+                            <span>49 mjesta</span>
+                            <span>Klimatizacija</span>
+                            <span>Wi-Fi</span>
+
+                        </div>
+
+
+                        <a href="#" class="vehicle-button">
+                            POGLEDAJTE UNUTRAŠNJOST →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TEMSA -->
+
+                <div class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/temsa50.jpg') }}"
+                            alt="Temsa Safari"
+                        >
+
+                    </div>
+
+
+                    <div class="vehicle-info">
+
+                        <img
+                            src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                            alt="Sarač Bus"
+                            class="vehicle-logo"
+                        >
+
+                        <p class="vehicle-type">
+                            AUTOBUS
+                        </p>
+
+                        <h3>
+                            Temsa Safari
+                        </h3>
+
+                        <p>
+                            Turistički autobus
+                        </p>
+
+
+                        <div class="vehicle-details">
+
+                            <span>50 mjesta</span>
+                            <span>Klimatizacija</span>
+                            <span>Wi-Fi</span>
+
+                        </div>
+
+
+                        <a href="#" class="vehicle-button">
+                            POGLEDAJTE UNUTRAŠNJOST →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TOURINO -->
+
+                <div class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/tourino.jpg') }}"
+                            alt="Mercedes-Benz Tourino"
+                        >
+
+                    </div>
+
+
+                    <div class="vehicle-info">
+
+                        <img
+                            src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                            alt="Sarač Bus"
+                            class="vehicle-logo"
+                        >
+
+                        <p class="vehicle-type">
+                            AUTOBUS
+                        </p>
+
+                        <h3>
+                            Mercedes-Benz Tourino
+                        </h3>
+
+                        <p>
+                            Turistički autobus
+                        </p>
+
+
+                        <div class="vehicle-details">
+
+                            <span>36 mjesta</span>
+                            <span>Klimatizacija</span>
+                            <span>Wi-Fi</span>
+
+                        </div>
+
+
+                        <button
+                            class="vehicle-button"
+                            onclick="openGallery('tourino')"
+                        >
+                            POGLEDAJTE UNUTRAŠNJOST →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MINIBUSI -->
+
+        <section class="fleet-section">
+
+            <h2>Minibusi</h2>
+
+            <div class="fleet-grid">
+
+
+                <!-- MERCEDES-BENZ SPRINTER 20 -->
+
+                <div class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/sprinter.jpg') }}"
+                            alt="Mercedes-Benz Sprinter"
+                        >
+
+                    </div>
+
+
+                    <div class="vehicle-info">
+
+                        <img
+                            src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                            alt="Sarač Bus"
+                            class="vehicle-logo"
+                        >
+
+                        <p class="vehicle-type">
+                            MINIBUS
+                        </p>
+
+                        <h3>
+                            Mercedes-Benz Sprinter
+                        </h3>
+
+                        <p>
+                            Minibus
+                        </p>
+
+
+                        <div class="vehicle-details">
+
+                            <span>20 mjesta</span>
+
+                        </div>
+
+
+                        <button
+                            class="vehicle-button"
+                            onclick="openGallery('sprinter')"
+                        >
+                            POGLEDAJTE UNUTRAŠNJOST →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MERCEDES-BENZ SPRINTER 22 -->
+
+                <div class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/sprinter22.jpg') }}"
+                            alt="Mercedes-Benz Sprinter 22"
+                        >
+
+                    </div>
+
+
+                    <div class="vehicle-info">
+
+                        <img
+                            src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                            alt="Sarač Bus"
+                            class="vehicle-logo"
+                        >
+
+                        <p class="vehicle-type">
+                            MINIBUS
+                        </p>
+
+                        <h3>
+                            Mercedes-Benz Sprinter
+                        </h3>
+
+                        <p>
+                            Minibus
+                        </p>
+
+
+                        <div class="vehicle-details">
+
+                            <span>22 mjesta</span>
+
+                        </div>
+
+
+                        <a href="#" class="vehicle-button">
+                            POGLEDAJTE UNUTRAŠNJOST →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- IVECO -->
+
+                <div class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/IVECO.jpg') }}"
+                            alt="IVECO"
+                        >
+
+                    </div>
+
+
+                    <div class="vehicle-info">
+
+                        <img
+                            src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                            alt="Sarač Bus"
+                            class="vehicle-logo"
+                        >
+
+                        <p class="vehicle-type">
+                            MINIBUS
+                        </p>
+
+                        <h3>
+                            IVECO
+                        </h3>
+
+                        <p>
+                            Minibus
+                        </p>
+
+
+                        <div class="vehicle-details">
+
+                            <span>20 mjesta</span>
+
+                        </div>
+
+
+                        <a href="#" class="vehicle-button">
+                            DETALJI VOZILA →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ZAJEDNIČKA GALERIJA -->
+
+    <div
+        id="vehicleGallery"
+        style="
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        "
+    >
+
+        <!-- ZATVORI -->
+
+        <button
+            onclick="closeGallery()"
+            style="
+                position: absolute;
+                top: 25px;
+                right: 35px;
+                font-size: 40px;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+            "
+        >
+            ×
+        </button>
+
+
+
+        <!-- PRETHODNA SLIKA -->
+
+        <button
+            onclick="previousImage()"
+            style="
+                position: absolute;
+                left: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 55px;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+            "
+        >
+            ‹
+        </button>
+
+
+
+        <!-- SLIKA -->
+
+        <img
+            id="vehicleGalleryImage"
+            src=""
+            alt="Unutrašnjost vozila"
+            style="
+                max-width: 85%;
+                max-height: 85%;
+                object-fit: contain;
+            "
+        >
+
+
+
+        <!-- SLJEDEĆA SLIKA -->
+
+        <button
+            onclick="nextImage()"
+            style="
+                position: absolute;
+                right: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 55px;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+            "
+        >
+            ›
+        </button>
+
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='js/galleries.js') }}"></script>
+
+
+</body>
+
+</html>

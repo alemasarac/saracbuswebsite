@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Usluge | Sarač Bus</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a href="/" class="logo">
+
+            <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="Sarač Bus"
+            >
+
+        </a>
+
+
+        <nav>
+
+            <a href="/">
+                Početna
+            </a>
+
+            <a href="/vozni-park">
+                Vozni park
+            </a>
+
+            <a href="/usluge" class="active">
+                Usluge
+            </a>
+
+            <a href="/o-nama">
+                O nama
+            </a>
+
+            <a href="/kontakt">
+                Kontakt
+            </a>
+
+        </nav>
+
+
+        <a href="/kontakt" class="contact-button">
+            KONTAKT
+        </a>
+
+    </header>
+
+
+
+    <!-- USLUGE -->
+
+    <main class="services-page">
+
+
+        <!-- UVOD -->
+
+        <section class="services-intro">
+
+            <img
+                src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                alt="Sarač Bus"
+                class="services-logo"
+            >
+
+            <h1>
+                Naše <span>usluge</span>
+            </h1>
+
+            <p>
+                Pouzdana rješenja za prevoz putnika,
+                prilagođena vašim potrebama.
+            </p>
+
+        </section>
+
+
+
+        <!-- USLUGE -->
+
+        <section class="services-grid">
+
+
+            <!-- ČARTER PREVOZ -->
+
+            <div class="service-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                    alt="Sarač Bus"
+                    class="service-logo"
+                >
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h2>
+                    Čarter prevoz
+                </h2>
+
+                <p>
+                    Organizujemo prevoz za grupe, udruženja,
+                    kompanije i druge organizacije prema
+                    dogovorenoj relaciji i terminu.
+                </p>
+
+                <a href="/kontakt">
+                    POŠALJITE UPIT →
+                </a>
+
+            </div>
+
+
+
+            <!-- TURISTIČKA PUTOVANJA -->
+
+            <div class="service-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                    alt="Sarač Bus"
+                    class="service-logo"
+                >
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h2>
+                    Turistička putovanja
+                </h2>
+
+                <p>
+                    Prevoz putnika na jednodnevnim i višednevnim
+                    turističkim putovanjima u Bosni i Hercegovini
+                    i inostranstvu.
+                </p>
+
+                <a href="/kontakt">
+                    POŠALJITE UPIT →
+                </a>
+
+            </div>
+
+
+
+            <!-- PREVOZ GRUPA -->
+
+            <div class="service-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                    alt="Sarač Bus"
+                    class="service-logo"
+                >
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h2>
+                    Prevoz grupa
+                </h2>
+
+                <p>
+                    Organizujemo siguran i udoban prevoz za
+                    sportske klubove, škole, udruženja, firme
+                    i druge organizovane grupe.
+                </p>
+
+                <a href="/kontakt">
+                    POŠALJITE UPIT →
+                </a>
+
+            </div>
+
+
+
+            <!-- ŠKOLSKI PREVOZ -->
+
+            <div class="service-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                    alt="Sarač Bus"
+                    class="service-logo"
+                >
+
+                <div class="service-number">
+                    04
+                </div>
+
+                <h2>
+                    Školski prevoz
+                </h2>
+
+                <p>
+                    Prevoz učenika u okviru organizovanog
+                    školskog saobraćaja, uz poseban fokus
+                    na sigurnost i pouzdanost.
+                </p>
+
+                <a href="/kontakt">
+                    POŠALJITE UPIT →
+                </a>
+
+            </div>
+
+
+
+            <!-- POSLOVNI PREVOZ -->
+
+            <div class="service-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                    alt="Sarač Bus"
+                    class="service-logo"
+                >
+
+                <div class="service-number">
+                    05
+                </div>
+
+                <h2>
+                    Poslovni prevoz
+                </h2>
+
+                <p>
+                    Rješenja za prevoz zaposlenika, poslovnih
+                    partnera i učesnika različitih poslovnih
+                    događaja.
+                </p>
+
+                <a href="/kontakt">
+                    POŠALJITE UPIT →
+                </a>
+
+            </div>
+
+
+
+            <!-- PREVOZ PO DOGOVORU -->
+
+            <div class="service-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/logo-dark.png') }}"
+                    alt="Sarač Bus"
+                    class="service-logo"
+                >
+
+                <div class="service-number">
+                    06
+                </div>
+
+                <h2>
+                    Prevoz po dogovoru
+                </h2>
+
+                <p>
+                    Za posebne zahtjeve i specifične potrebe
+                    prevoza, kontaktirajte nas kako bismo
+                    zajedno pronašli odgovarajuće rješenje.
+                </p>
+
+                <a href="/kontakt">
+                    POŠALJITE UPIT →
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- DONJI POZIV -->
+
+        <section class="services-cta">
+
+            <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="Sarač Bus"
+                class="services-cta-logo"
+            >
+
+            <h2>
+                Imate konkretan zahtjev?
+            </h2>
+
+            <p>
+                Pošaljite nam informacije o putovanju,
+                a mi ćemo vam pripremiti odgovarajuću ponudu.
+            </p>
+
+            <a href="/kontakt" class="contact-button">
+                KONTAKTIRAJTE NAS →
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+</body>
+
+</html>
